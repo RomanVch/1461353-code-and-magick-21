@@ -34,7 +34,7 @@ window.renderStatistics = function (ctx, names, times) {
     ctx.font = `16px PT Mono`;
     ctx.fillText(`Ура вы победили !`, 115, 40);
     ctx.fillText(`Cписок результатов:`, 115, 60);
-    ctx.fillText(Math.round(times[i]), 160 + (GAP * [i]), 100 );//не могу понять от чего зависит положение
+    ctx.fillText(Math.round(times[i]), 160 + (GAP * [i]), 100); // не могу понять от чего зависит положение
     ctx.fillText(namesSort[i], POINT_X + (GAP * i), POINT_Y_FONT);
     if (i === 0) {
       ctx.fillStyle = `rgba(255, 0, 0, 1)`;
