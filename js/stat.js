@@ -16,11 +16,13 @@ const renderCloud = function (ctx, x, y, color) {
   ctx.fillStyle = color;
   ctx.fillRect(x, y, CLOUD_WIDTH, CLOUD_HEIGHT);
 };
-
+const getMaxElement = function (times) {
+  return Math.max.apply(null, times);
+};
+const randomNumber = function (min, max) {
+  return (Math.random() * (max - min + 1)) + min;
+};
 window.renderStatistics = function (ctx, names, times) {
-  function getMaxElement(times) {
-    return Math.max.apply(null, times);
-  }
   const namesSort = names.sort();
   renderCloud(ctx, CLOUD_X + CLOUD_Y, CLOUD_Y + CLOUD_Y, `rgba(0, 0, 0, 0.7)`);
   renderCloud(ctx, CLOUD_X, CLOUD_Y, `#fff`);
@@ -36,7 +38,7 @@ window.renderStatistics = function (ctx, names, times) {
       ctx.fillStyle = `rgba(255, 0, 0, 1)`;
     }
     else {
-      ctx.fillStyle = `hsl(220, ${~~(Math.random() * 100)}%, 47%)`;
+      ctx.fillStyle = `hsl(220, ${randomNumber(1, 100)}%, 47%)`;
     }
     const percentMaxTime = maxTime / 100;
     const precentTime = times[i] / percentMaxTime;
