@@ -36,8 +36,7 @@ window.renderStatistics = function (ctx, names, times) {
     ctx.fillText(namesSort[i], POINT_X + (GAP * i), POINT_Y_FONT);
     if (i === 0) {
       ctx.fillStyle = `rgba(255, 0, 0, 1)`;
-    }
-    else {
+    } else {
       ctx.fillStyle = `hsl(220, ${randomNumber(1, 100)}%, 47%)`;
     }
     const percentMaxTime = maxTime / 100;
