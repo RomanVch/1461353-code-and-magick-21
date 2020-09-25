@@ -62,7 +62,7 @@
     </div>
   </header>
 
-  <div class="overlay setup hidden">
+  <div class="overlay setup hidden" id="setupDel">
     <form class="setup-wizard-form" method="post" enctype="multipart/form-data" autocomplete="off">
 
       <div class="setup-title">
@@ -138,7 +138,7 @@
       </div>
 
       <div class="setup-footer">
-        <div class="setup-similar hidden">
+        <div class="setup-similar hidden" id="setup-similar">
 
           <h4 class="setup-similar-title">Похожие персонажи</h4>
 
@@ -157,7 +157,7 @@
   </footer>
 
   <template id="similar-wizard-template" style="display: none">
-    <div class="setup-similar-item">
+    <div class="setup-similar-item" id="setup-similar-item">
       <div class="setup-similar-content">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 86" class="setup-similar-wizard">
           <g class="wizard">
@@ -190,6 +190,7 @@
   </script>
   <script src="js/stat.js"></script>
   <script src="js/game.js"></script>
+  <script src="js/setup.js"></script>
 
 </body>
 
