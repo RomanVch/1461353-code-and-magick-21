@@ -22,6 +22,7 @@ const getMaxElement = function (times) {
 const randomNumber = function (min, max) {
   return (Math.random() * (max - min + 1)) + min;
 };
+window.randomNumbers = randomNumber;
 window.renderStatistics = function (ctx, names, times) {
   const namesSort = names.sort();
   renderCloud(ctx, CLOUD_X + CLOUD_Y, CLOUD_Y + CLOUD_Y, `rgba(0, 0, 0, 0.7)`);
