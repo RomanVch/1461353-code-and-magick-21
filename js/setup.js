@@ -54,7 +54,7 @@ const colorFireBall = [
   `#e6e848`,
 ];
 
-const fireBall = document.querySelector(`.setup-fireball-wrap`)
+const fireBall = document.querySelector(`.setup-fireball-wrap`);
 const wizardCoat = document.querySelector(`.setup-wizard .wizard-coat`);
 const wizardEyes = document.querySelector(`.setup-wizard .wizard-eyes`);
 setup.classList.remove(`hidden`);
