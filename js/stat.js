@@ -33,7 +33,7 @@ window.renderStatistics = function (ctx, names, times) {
     ctx.font = `16px PT Mono`;
     ctx.fillText(`Ура вы победили !`, FONT_X_URA, 40);
     ctx.fillText(`Cписок результатов:`, FONT_X_URA, 60);
-    ctx.fillText(Math.round(times[i]), POINT_X + (GAP * [i]), +100); // не могу понять от чего зависит положение
+    ctx.fillText(Math.round(times[i]), POINT_X + (GAP * [i]), +100);
     ctx.fillText(namesSort[i], POINT_X + (GAP * i), POINT_Y_FONT);
     if (i === 0) {
       ctx.fillStyle = `rgba(255, 0, 0, 1)`;
@@ -47,7 +47,7 @@ window.renderStatistics = function (ctx, names, times) {
     ctx.fillRect(POINT_X + (GAP * i),
         POINT_Y,
         COLUMN_WIDTH,
-        -resultHeight); // показывал в переписке еще одно решение но проблема в том что высота не ограничена а меньше 150 мы не можем поставить.
+        -resultHeight);
   }
 };
 
