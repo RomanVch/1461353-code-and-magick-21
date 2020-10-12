@@ -12,10 +12,10 @@ const colorFireBall = [
   `#e848d5`,
   `#e6e848`,
 ];
-(function () {
+(() => {
   const wizardCoatChange = () => {
     let i = 0;
-    wizardCoat.addEventListener(`click`, function () {
+    wizardCoat.addEventListener(`click`, () => {
       i++;
       wizardCoat.style.fill = window.coatColorMagickMan[i];
       if (i >= window.coatColorMagickMan.length - 1) {
@@ -26,7 +26,7 @@ const colorFireBall = [
   wizardCoatChange();
   const wizardEyesChange = () => {
     let i = 0;
-    wizardEyes.addEventListener(`click`, function () {
+    wizardEyes.addEventListener(`click`, () => {
       i++;
       wizardEyes.style.fill = window.eyesColorMagickMan[i];
       if (i >= window.eyesColorMagickMan.length - 1) {
@@ -38,7 +38,7 @@ const colorFireBall = [
 
   const fireBallChange = () => {
     let i = 0;
-    fireBall.addEventListener(`click`, function () {
+    fireBall.addEventListener(`click`, () => {
       i++;
       fireBall.style.background = colorFireBall[i];
       if (i >= colorFireBall.length - 1) {
@@ -49,7 +49,7 @@ const colorFireBall = [
   fireBallChange();
 })();
 
-userNameInput.addEventListener(`input`, function () {
+userNameInput.addEventListener(`input`, () => {
   const valueLength = userNameInput.value.length;
 
   if (valueLength < MIN_NAME_LENGTH) {

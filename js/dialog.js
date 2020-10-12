@@ -1,10 +1,10 @@
 'use strict';
 (() => {
 
-  let setupDialogElement = document.querySelector(`.setup`);
-  let dialogHandle = setupDialogElement.querySelector(`.upload`);
+  const setupDialogElement = document.querySelector(`.setup`);
+  const dialogHandle = setupDialogElement.querySelector(`.upload`);
 
-  dialogHandle.addEventListener(`mousedown`, function (evt) {
+  dialogHandle.addEventListener(`mousedown`, (evt) => {
     evt.preventDefault();
 
     let startCoords = {
@@ -14,12 +14,12 @@
 
     let dragged = false;
 
-    let onMouseMove = (moveEvt) => {
+    const onMouseMove = (moveEvt) => {
       moveEvt.preventDefault();
 
       dragged = true;
 
-      let shift = {
+      const shift = {
         x: startCoords.x - moveEvt.clientX,
         y: startCoords.y - moveEvt.clientY
       };
@@ -34,14 +34,14 @@
 
     };
 
-    let onMouseUp = (upEvt) => {
+    const onMouseUp = (upEvt) => {
       upEvt.preventDefault();
 
       document.removeEventListener(`mousemove`, onMouseMove);
       document.removeEventListener(`mouseup`, onMouseUp);
 
       if (dragged) {
-        let onClickPreventDefault = (clickEvt) => {
+        const onClickPreventDefault = (clickEvt) => {
           clickEvt.preventDefault();
           dialogHandle.removeEventListener(`click`, onClickPreventDefault);
         };

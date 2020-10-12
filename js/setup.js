@@ -73,7 +73,7 @@ const magickMan = [
     eyesColor: eyesColorMagickMan[Math.floor(window.randomNumbers(0, eyesColorMagickMan.length))]
   }
 ];
-let renderWizard = function (wizard) {
+const renderWizard = (wizard) => {
   let wizardElement = similarWizard.cloneNode(true);
   wizardElement.querySelector(`.setup-similar-label`).textContent = wizard.name;
   wizardElement.querySelector(`.wizard-coat`).style.fill = wizard.coatColor;

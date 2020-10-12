@@ -12,18 +12,18 @@ const COLUMN_WIDTH = 40;
 const COLUMN_HIGHT = 150;
 const FONT_X_URA = 115;
 
-const renderCloud = function (ctx, x, y, color) {
+const renderCloud = (ctx, x, y, color) => {
   ctx.fillStyle = color;
   ctx.fillRect(x, y, CLOUD_WIDTH, CLOUD_HEIGHT);
 };
-const getMaxElement = function (times) {
+const getMaxElement = (times) => {
   return Math.max.apply(null, times);
 };
-const randomNumber = function (min, max) {
+const randomNumber = (min, max) => {
   return (Math.random() * (max - min + 1)) + min;
 };
 window.randomNumbers = randomNumber;
-window.renderStatistics = function (ctx, names, times) {
+window.renderStatistics = (ctx, names, times) => {
   const namesSort = names.sort();
   renderCloud(ctx, CLOUD_X + CLOUD_Y, CLOUD_Y + CLOUD_Y, `rgba(0, 0, 0, 0.7)`);
   renderCloud(ctx, CLOUD_X, CLOUD_Y, `#fff`);
