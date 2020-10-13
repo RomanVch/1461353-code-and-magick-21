@@ -73,15 +73,16 @@ const magickMan = [
     eyesColor: eyesColorMagickMan[Math.floor(window.randomNumbers(0, eyesColorMagickMan.length))]
   }
 ];
-const renderWizard = (wizard) => {
-  let wizardElement = similarWizard.cloneNode(true);
-  wizardElement.querySelector(`.setup-similar-label`).textContent = wizard.name;
-  wizardElement.querySelector(`.wizard-coat`).style.fill = wizard.coatColor;
-  wizardElement.querySelector(`.wizard-eyes`).style.fill = wizard.eyesColor;
-  return wizardElement;
-};
+(() => {
+  const renderWizard = (wizard) => {
+    let wizardElement = similarWizard.cloneNode(true);
+    wizardElement.querySelector(`.setup-similar-label`).textContent = wizard.name;
+    wizardElement.querySelector(`.wizard-coat`).style.fill = wizard.coatColor;
+    wizardElement.querySelector(`.wizard-eyes`).style.fill = wizard.eyesColor;
+    return wizardElement;
+  };
 
-for (let i = 0; i <= NUMBER_MAGIC_MAN; i++) {
-  setupList.appendChild(renderWizard(magickMan[i]));
-}
-
+  for (let i = 0; i <= NUMBER_MAGIC_MAN; i++) {
+    setupList.appendChild(renderWizard(magickMan[i]));
+  }
+})();
