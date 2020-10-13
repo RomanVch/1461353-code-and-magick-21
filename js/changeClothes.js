@@ -1,18 +1,15 @@
 'use strict';
-const fireBall = document.querySelector(`.setup-fireball-wrap`);
-const wizardCoat = document.querySelector(`.setup-wizard .wizard-coat`);
-const wizardEyes = document.querySelector(`.setup-wizard .wizard-eyes`);
-const userNameInput = document.querySelector(`.setup-user-name`);
-const MIN_NAME_LENGTH = 2;
-const MAX_NAME_LENGTH = 25;
-const colorFireBall = [
-  `#ee4830`,
-  `#30a8ee`,
-  `#5ce6c0`,
-  `#e848d5`,
-  `#e6e848`,
-];
 (() => {
+  const fireBall = document.querySelector(`.setup-fireball-wrap`);
+  const wizardCoat = document.querySelector(`.setup-wizard .wizard-coat`);
+  const wizardEyes = document.querySelector(`.setup-wizard .wizard-eyes`);
+  const colorFireBall = [
+    `#ee4830`,
+    `#30a8ee`,
+    `#5ce6c0`,
+    `#e848d5`,
+    `#e6e848`,
+  ];
   const wizardCoatChange = () => {
     let i = 0;
     wizardCoat.addEventListener(`click`, () => {
@@ -49,6 +46,9 @@ const colorFireBall = [
   fireBallChange();
 })();
 
+const userNameInput = document.querySelector(`.setup-user-name`);
+const MIN_NAME_LENGTH = 2;
+const MAX_NAME_LENGTH = 25;
 userNameInput.addEventListener(`input`, () => {
   const valueLength = userNameInput.value.length;
 

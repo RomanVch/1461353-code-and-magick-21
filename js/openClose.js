@@ -1,8 +1,7 @@
 'use strict';
-const setupOpen = document.querySelector(`.setup-open`);
-const setupClose = document.querySelector(`.setup-close`);
-// открывния закрывания окна с магом
 (() => {
+  const setupOpen = document.querySelector(`.setup-open`);
+  const setupClose = document.querySelector(`.setup-close`);
   const onPopupEscPress = (evt) => {
 
     if (evt.key === `Escape`) {

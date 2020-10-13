@@ -1,17 +1,16 @@
 'use strict';
-
-const CLOUD_WIDTH = 420;
-const CLOUD_HEIGHT = 270;
-const CLOUD_X = 100;
-const CLOUD_Y = 10;
-const GAP = 88;
-const POINT_X = 120;
-const POINT_Y_FONT = 260;
-const POINT_Y = 240;
-const COLUMN_WIDTH = 40;
-const COLUMN_HIGHT = 150;
-const FONT_X_URA = 115;
 (() => {
+  const CLOUD_WIDTH = 420;
+  const CLOUD_HEIGHT = 270;
+  const CLOUD_X = 100;
+  const CLOUD_Y = 10;
+  const GAP = 88;
+  const POINT_X = 120;
+  const POINT_Y_FONT = 260;
+  const POINT_Y = 240;
+  const COLUMN_WIDTH = 40;
+  const COLUMN_HIGHT = 150;
+  const FONT_X_URA = 115;
   const renderCloud = (ctx, x, y, color) => {
     ctx.fillStyle = color;
     ctx.fillRect(x, y, CLOUD_WIDTH, CLOUD_HEIGHT);
